@@ -20,5 +20,5 @@ module "service_project" {
   apis_to_enable              = var.service_project_apis_to_enable
   subnets                     = var.subnets
 
-  subnet_users                = []
+  subnet_users                = [data.google_service_account.compute_engine_default.email]
 }
